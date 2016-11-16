@@ -18,5 +18,5 @@ get '/collaborator/:collaboratorid' do
           { :id => 4, :name => 'Gui'},
           { :id => 5, :name => 'Lia'}]
 
-  team.select { |collaborator| collaborator.id != collaboratorid }.to_json
+  team.select { |collaborator| collaborator[:id] != collaboratorid }.to_json
 end
